@@ -1,4 +1,7 @@
-public class Main {
+import java.util.ArrayList;
 
-    // VideoGames.describeSelf();
+public class Main {
+    private static void main(String[] args) {
+        ArrayList<VideoGames> allVideoGames = new ArrayList<>();
+    }
 }
