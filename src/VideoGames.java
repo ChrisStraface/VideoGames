@@ -3,7 +3,7 @@ public class VideoGames {
      String platform;
      String releaseDate;
 
-    private VideoGames(String name, String platform, String releaseDate) {
+    VideoGames(String name, String platform, String releaseDate) {
         this.name = name;
         this.platform = platform;
         this.releaseDate = releaseDate;
