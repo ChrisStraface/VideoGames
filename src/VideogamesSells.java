@@ -13,4 +13,36 @@ public class VideogamesSells extends VideoGames {
         this.sells = sells;
     }
 
+    private String getDeveloper() {
+        return developer;
+    }
+
+    private void setDeveloper(String developer) {
+        this.developer = developer;
+    }
+
+    private String getPublisher() {
+        return publisher;
+    }
+
+    private void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
+
+    private  String getSeries() {
+        return series;
+    }
+
+    private void setSeries(String series) {
+        this.series = series;
+    }
+
+    private int getSells() {
+        return sells;
+    }
+
+    private void setSells(int sells) {
+        this.sells = sells;
+    }
 }
+
