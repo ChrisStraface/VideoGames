@@ -2,9 +2,7 @@ import java.util.ArrayList;
 
 public class Main {
     private static void main(String[] args) {
-        ArrayList<VideoGames> allVideoGames = new ArrayList<>();
-        VideoGames Minecraft = new VideoGames("Minecraft", "multiplatform", "November 18, 2011");
-        allVideoGames.add(Minecraft);
-        Minecraft.describeSelf();
+        new VideoGameScore("The Legend of Zelda: Ocarina of Time", "N64", "November 23, 1998", 1, 99);
+
     }
 }

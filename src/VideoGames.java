@@ -1,4 +1,7 @@
+import java.util.ArrayList;
+
 public class VideoGames {
+    private static ArrayList<VideoGames> allVideoGames = new ArrayList<>();
      String name;
      String platform;
      String releaseDate;
@@ -7,6 +10,15 @@ public class VideoGames {
         this.name = name;
         this.platform = platform;
         this.releaseDate = releaseDate;
+        allVideoGames.add(this);
+    }
+
+    public static ArrayList<VideoGames> getAllVideoGames() {
+        return allVideoGames;
+    }
+
+    public static void setAllVideoGames(ArrayList<VideoGames> allVideoGames) {
+        VideoGames.allVideoGames = allVideoGames;
     }
 
     private String getName() {
