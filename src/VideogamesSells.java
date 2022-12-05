@@ -45,6 +45,11 @@ public class VideogamesSells extends VideoGames {
         this.sells = sells;
     }
 
+    public String toString()
+    {
+        return name + ", " + platform + ", " + releaseDate + ", " + developer + ", " + publisher + ", " + series + ", " + sells;
+    }
+
     void describeSelf() {
         System.out.println(name + ", " + platform + ", " + releaseDate + ", " + developer + ", " + publisher + ", " + series + ", " + sells);
     }

@@ -25,7 +25,12 @@ public class VideoGameScore extends VideoGames {
         this.score = score;
     }
 
+    public String toString()
+    {
+        return name + ", " + platform + ", " + releaseDate + ", ranked" + rank + ", score of " + score;
+    }
+
     void describeSelf() {
-        System.out.println(name + ", " + platform + ", " + releaseDate + "ranked " + rank + ", score of " + score);
+        System.out.println(name + ", " + platform + ", " + releaseDate + ", ranked " + rank + ", score of " + score);
     }
 }
