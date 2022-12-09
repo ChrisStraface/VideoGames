@@ -34,3 +34,4 @@ public class VideoGameScore extends VideoGames {
         System.out.println(name + ", " + platform + ", " + releaseDate + ", ranked " + rank + ", score of " + score);
     }
 }
+

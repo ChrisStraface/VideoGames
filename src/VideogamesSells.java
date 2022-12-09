@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class VideogamesSells extends VideoGames {
 
 
@@ -52,6 +56,31 @@ public class VideogamesSells extends VideoGames {
 
     void describeSelf() {
         System.out.println(name + ", " + platform + ", " + releaseDate + ", " + developer + ", " + publisher + ", " + series + ", " + sells);
+    }
+    static void readAllData() {
+        Scanner sc = null;
+        try{
+            File file = new File("src/Video game sales data");
+            sc = new Scanner(file);
+            String line;
+            while (sc.hasNextLine()) {
+                line = sc.nextLine();
+                Scanner lineScanner = new Scanner(line);
+                lineScanner.useDelimiter("\t");
+                while (lineScanner.hasNext()) {
+                    String chunkOfData = lineScanner.next();
+                    System.out.println(chunkOfData);
+                }
+                System.out.println(line);
+            }
+        }
+        catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        finally {
+            if (sc != null) sc.close();
+        }
     }
 }
 
