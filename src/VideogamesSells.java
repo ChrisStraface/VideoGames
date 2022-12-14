@@ -65,13 +65,17 @@ public class VideogamesSells extends VideoGames {
             String line;
             while (sc.hasNextLine()) {
                 line = sc.nextLine();
+                System.out.println(line);
                 Scanner lineScanner = new Scanner(line);
                 lineScanner.useDelimiter("\t");
-                while (lineScanner.hasNext()) {
-                    String chunkOfData = lineScanner.next();
-                    System.out.println(chunkOfData);
-                }
-                System.out.println(line);
+                String name = lineScanner.next();
+                int sales = lineScanner.nextInt();
+                String series = lineScanner.next();
+                String platform = lineScanner.next();
+                String releaseDate = lineScanner.next();
+                String developer = lineScanner.next();
+                String publisher = lineScanner.next();
+                new VideogamesSells(name, platform, releaseDate, developer, publisher, series, sales);
             }
         }
         catch (FileNotFoundException e)

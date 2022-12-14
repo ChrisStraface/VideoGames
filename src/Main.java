@@ -5,8 +5,7 @@ public class Main {
         VideogamesSells.readAllData();
 
         for(VideoGames game: VideoGames.getAllVideoGames()) {
-           System.out.println(game);
-
+            System.out.println(game);
        }
     }
 
