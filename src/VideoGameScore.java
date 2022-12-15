@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class VideoGameScore extends VideoGames {
 
     private int rank;
@@ -25,13 +29,40 @@ public class VideoGameScore extends VideoGames {
         this.score = score;
     }
 
-    public String toString()
-    {
+    public String toString() {
         return name + ", " + platform + ", " + releaseDate + ", ranked" + rank + ", score of " + score;
     }
 
     void describeSelf() {
         System.out.println(name + ", " + platform + ", " + releaseDate + ", ranked " + rank + ", score of " + score);
     }
-}
+
+    static void readAllData() {
+        Scanner sc = null;
+        try {
+            File file = new File("src/Videogamescoresdata");
+            sc = new Scanner(file);
+            String line;
+            while (sc.hasNextLine()) {
+                line = sc.nextLine();
+                System.out.println(line);
+                Scanner lineScanner = new Scanner(line);
+                lineScanner.useDelimiter("\t");
+                int rank = lineScanner.nextInt();
+                String name = lineScanner.next();
+                String platform = lineScanner.next();
+                String releaseDate = lineScanner.next();
+                int score = lineScanner.nextInt();
+                new VideoGameScore(name,platform,releaseDate,rank,score);
+            }
+            }
+        catch(FileNotFoundException e)
+            {
+                e.printStackTrace();
+            }
+        finally{
+                if (sc != null) sc.close();
+            }
+        }
+    }
 
