@@ -52,7 +52,9 @@ public class VideoGameScore extends VideoGames {
                 String name = lineScanner.next();
                 String platform = lineScanner.next();
                 String releaseDate = lineScanner.next();
-                int score = lineScanner.nextInt();
+                String scoreString = lineScanner.next();
+                System.out.println(scoreString);
+                int score = Integer.parseInt(scoreString);
                 new VideoGameScore(name,platform,releaseDate,rank,score);
             }
             }
